@@ -59,6 +59,20 @@ function App() {
       console.log(error.message);
     }
   };
+  
+  
+    const signInWithYahoo = async () => {
+    // Retrieve Google provider object
+    const provider = new firebase.auth.OAuthProvider('yahoo.com');
+    // Set language to the default browser preference
+    firebase.auth().useDeviceLanguage();
+    // Start sign in process
+    try {
+      await firebase.auth().signInWithPopup(provider);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   const signOut = async () => {
     try {
@@ -132,6 +146,8 @@ function App() {
             </svg>
             Sign in with Google
           </button>
+    <button
+            onClick={signInWithYahoo}><img src="https://s.yimg.com/rz/l/favicon.ico"/>Sign in with Yahoo</button>
         </div>
       </div>
     );
