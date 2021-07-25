@@ -9,14 +9,7 @@ import { useAuthState, useDarkMode } from './hooks';
 import Channel from './components/Channel';
 import Loader from './components/Loader';
 
-firebase.initializeApp({
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-});
+firebase.initializeApp({ apiKey: "AIzaSyCwEbTFhXHrMvRMfn40907vN8H1S7zoaww", authDomain: "chat-71994.firebaseapp.com", projectId: "chat-71994", storageBucket: "chat-71994.appspot.com", messagingSenderId: "467745379204", appId: "1:467745379204:web:ab78db967fd9533cd483d1" })
 
 const MoonIcon = props => (
   <svg
