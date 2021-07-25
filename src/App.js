@@ -113,6 +113,7 @@ function App() {
           </h2>
           <p className="mb-8 text-lg text-center">
             The easiest way to chat with people all around the world.
+            If you want a post deleted, contact me at my email info@ontheroadtovote.com and tell me what post you want deleted and I will delete it for you. Please be aware by signing into this site I can see your email.
           </p>
           <button
             onClick={signInWithGoogle}
