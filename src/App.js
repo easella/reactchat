@@ -147,7 +147,7 @@ function App() {
             Sign in with Google
           </button>
     <button
-            onClick={signInWithYahoo}><img src="https://s.yimg.com/rz/l/favicon.ico"/>Sign in with Yahoo</button>
+            onClick={signInWithYahoo}><img src="https://s.yimg.com/rz/l/favicon.ico" alt="yahoo logo"/>Sign in with Yahoo</button>
         </div>
       </div>
     );
