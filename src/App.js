@@ -162,8 +162,7 @@ function App() {
     <button
               className="rounded shadow-button pl-6 pr-8 py-3 bg-white hover:bg-gray-50 text-gray-600 font-medium flex items-center justify-center overflow-y-hidden focus:outline-none focus:ring focus:ring-primary-500 focus:ring-opacity-75" onClick={signInWithYahoo}><img src="https://s.yimg.com/rz/l/favicon.ico" alt="yahoo logo"/>Sign in with Yahoo</button>
         <button
-            onClick={signInWithGithub}
-            className="rounded shadow-button pl-6 pr-8 py-3 bg-white hover:bg-gray-50 text-gray-600 font-medium flex items-center justify-center overflow-y-hidden focus:outline-none focus:ring focus:ring-primary-500 focus:ring-opacity-75"><img src="https://github.githubassets.com/favicons/favicon.png" alt="github logo">Sign in With Github</button>
+            onClick={signInWithGithub}  className="rounded shadow-button pl-6 pr-8 py-3 bg-white hover:bg-gray-50 text-gray-600 font-medium flex items-center justify-center overflow-y-hidden focus:outline-none focus:ring focus:ring-primary-500 focus:ring-opacity-75"><img src="https://github.githubassets.com/favicons/favicon.png" alt="github logo"/>Sign in With Github</button>
           
   
   </div>
