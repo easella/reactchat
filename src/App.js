@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 // Firebase deps
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
+
 import 'firebase/firestore';
 // Hooks
 import { useAuthState, useDarkMode } from './hooks';
@@ -39,27 +39,7 @@ const SunIcon = props => (
 );
 
 function App() {
-   state = { isSignedIn: false }
-  uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    callbacks: {
-      signInSuccess: () => false
-    }
-  }
-
-  componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ isSignedIn: !!user })
-      console.log("user", user)
-    })
-  }
+  
   
   const { user, initializing } = useAuthState(firebase.auth());
   const [darkMode, setDarkMode] = useDarkMode();
