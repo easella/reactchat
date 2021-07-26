@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 // Firebase deps
 import firebase from 'firebase/app';
 import 'firebase/auth';
