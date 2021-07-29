@@ -4,8 +4,7 @@ import firebase from 'firebase/app';
 import { useFirestoreQuery } from '../hooks';
 // Components
 import Message from './Message';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 const Channel = ({ user = null }) => {
   const db = firebase.firestore();
   const messagesRef = db.collection('messages');
