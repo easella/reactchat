@@ -4,7 +4,8 @@ import firebase from 'firebase/app';
 import { useFirestoreQuery } from '../hooks';
 // Components
 import Message from './Message';
-
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 const Channel = ({ user = null }) => {
   const db = firebase.firestore();
   const messagesRef = db.collection('messages');
@@ -81,14 +82,24 @@ const Channel = ({ user = null }) => {
           onSubmit={handleOnSubmit}
           className="flex flex-row bg-gray-200 dark:bg-coolDark-400 rounded-md px-4 py-3 z-10 max-w-screen-lg mx-auto dark:text-white shadow-md"
         >
-          <input
-            ref={inputRef}
-            type="text"
-            value={newMessage}
-            onChange={handleOnChange}
-            placeholder="Type your message here..."
-            className="flex-1 bg-transparent outline-none"
-          />
+       
+              
+               <CKEditor
+                   ref={inputRef}
+ onChange={handleOnChange}
+                    editor={ ClassicEditor }
+                    data=""
+                     value={newMessage}
+placeholder="Type your message here..."
+
+                className="flex-1 bg-transparent outline-none"
+                    onBlur={ ( event, editor ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event, editor ) => {
+                        console.log( 'Focus.', editor );
+                    } }
+                />
           <button
             type="submit"
             disabled={!newMessage}
