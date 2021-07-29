@@ -84,22 +84,7 @@ const Channel = ({ user = null }) => {
         >
        
               
-               <CKEditor
-                   ref={inputRef}
- onChange={handleOnChange}
-                    editor={ ClassicEditor }
-                    data=""
-                     value={newMessage}
-placeholder="Type your message here..."
-
-                className="flex-1 bg-transparent outline-none"
-                    onBlur={ ( event, editor ) => {
-                        console.log( 'Blur.', editor );
-                    } }
-                    onFocus={ ( event, editor ) => {
-                        console.log( 'Focus.', editor );
-                    } }
-                />
+              <input ref={inputRef} type="text" value={newMessage} onChange={handleOnChange} placeholder="Type your message here..." className="flex-1 bg-transparent outline-none" />
           <button
             type="submit"
             disabled={!newMessage}
